@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Elements Showcase</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 20px;
+            padding: 0;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        nav {
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        nav a {
+            color: #0000EE;
+            margin-right: 5px;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        
+        .left-section, .right-section {
+            padding: 0 20px;
+        }
+        
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        
+        h3 {
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+        }
+        
+        /* Table Styles */
+        table {
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        table, th, td {
+            border: 1px solid #000;
+        }
+        
+        th, td {
+            padding: 10px 15px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        
+        /* Lists */
+        ol, ul {
+            margin: 15px 0;
+            padding-left: 40px;
+        }
+        
+        li {
+            margin: 5px 0;
+        }
+        
+        /* Form Styles */
+        fieldset {
+            border: 1px solid #999;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        legend {
+            padding: 0 10px;
+            font-weight: normal;
+        }
+        
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            padding: 5px;
+            width: 200px;
+            border: 1px solid #ccc;
+        }
+        
+        input[type="checkbox"] {
+            margin-top: 15px;
+        }
+        
+        button {
+            margin-top: 20px;
+            padding: 5px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        
+        /* Media Section */
+        .media-text {
+            margin: 20px 0;
+        }
+        
+        .media-text a {
+            color: #0000EE;
+        }
+        
+        figure {
+            margin: 20px 0;
+        }
+        
+        figcaption {
+            margin-top: 10px;
+            font-size: 0.95em;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #000;
+        }
+        
+        footer a {
+            color: #0000EE;
+        }
+        
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML Elements Showcase</h1>
+        <nav>
+            <a href="#tables">Tables</a> | 
+            <a href="#forms">Forms</a> | 
+            <a href="#lists">Lists</a> | 
+            <a href="#media">Media</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <section id="tables">
+                <h2>1. Student Grades Table</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Subject</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>Math</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>Physics</td>
+                            <td>B+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="lists">
+                <h2>2. Lists Demo</h2>
+                
+                <h3>Ordered List (Top 3):</h3>
+                <ol>
+                    <li>HTML - Structure</li>
+                    <li>CSS - Styling</li>
+                    <li>JavaScript - Interactivity</li>
+                </ol>
+                
+                <h3>Unordered List (Features):</h3>
+                <ul>
+                    <li>Semantic markup</li>
+                    <li>Accessibility support</li>
+                    <li>SEO friendly</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <section id="forms">
+                <h2>3. Registration Form</h2>
+                <form>
+                    <fieldset>
+                        <legend>Sign Up Fieldset</legend>
+                        
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username">
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                        
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password">
+                        
+                        <label for="country">Country:</label>
+                        <select id="country" name="country">
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="India">India</option>
+                            <option value="USA">USA</option>
+                            <option value="UK">UK</option>
+                        </select>
+                        
+                        <div>
+                            <input type="checkbox" id="terms" name="terms">
+                            <label for="terms" style="display: inline; margin: 0;">I agree to terms</label>
+                        </div>
+                        
+                        <div>
+                            <button type="submit">Register</button>
+                            <button type="reset">Clear</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+
+            <section id="media">
+                <h2>4. Media & Text</h2>
+                <p class="media-text">
+                    This is a <b>bold</b> and <i>italic</i> text with a 
+                    <a href="https://en.wikipedia.org/wiki/Bangladesh">hyperlink</a>.
+                </p>
+                
+                <figure>
+                    <img src="image.png" alt="BD FLAG">
+                    <figcaption>Figure: Sample placeholder image</figcaption>
+                </figure>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 HTML Demo | <a href="#top">Back to Top</a></p>
+    </footer>
+</body>
+</html>
